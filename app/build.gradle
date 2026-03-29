@@ -1,0 +1,65 @@
+/*
+ * build.gradle (app) — Configuration de compilation du module Android.
+ *
+ * Dépendances clés :
+ *   - ion      : client HTTP asynchrone (requêtes vers l'API PHP)
+ *   - gson     : sérialisation/désérialisation JSON
+ *   - material : composants Material Design 3 (TextInputLayout, CardView, etc.)
+ *   - navigation : gestion de la navigation entre fragments
+ */
+
+plugins {
+    alias(libs.plugins.android.application)
+}
+
+android {
+    namespace 'com.example.powerhome'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.powerhome"
+        minSdk 24           // Android 7.0 Nougat minimum
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+    // AndroidX core
+    implementation libs.appcompat
+    implementation libs.activity
+    implementation libs.constraintlayout
+
+    // Material Design 3 (TextInputLayout, CardView, NavigationView, etc.)
+    implementation libs.material
+
+    // Navigation Jetpack (Fragment + DrawerLayout)
+    implementation libs.navigation.fragment
+    implementation libs.navigation.ui
+
+    // Ion — client HTTP asynchrone (appels vers l'API PHP)
+    // Doc : https://github.com/koush/ion
+    implementation libs.ion
+
+    // Gson — parsing JSON des réponses de l'API
+    implementation libs.gson
+
+    // Tests
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+}
