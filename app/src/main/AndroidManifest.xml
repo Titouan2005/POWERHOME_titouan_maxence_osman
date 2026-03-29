@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    AndroidManifest.xml — Fichier de configuration de l'application Android.
+
+    Points importants :
+    - Permission INTERNET : obligatoire pour les appels API HTTP
+    - SplashActivity est le point d'entrée (LAUNCHER)
+    - Les autres activités ont exported="false" (pas accessibles depuis l'extérieur)
+    - usesCleartextTraffic="true" : autorise HTTP (non HTTPS) pour le serveur local
+      ⚠️ À supprimer en production (utiliser HTTPS uniquement)
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Permission réseau pour les appels à l'API PHP -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PowerHome"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+
+        <!--
+            SplashActivity : point d'entrée de l'application (LAUNCHER).
+            Vérifie la session et redirige vers Login ou MainActivity.
+        -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- LoginActivity : écran de connexion -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- RegisterActivity : inscription d'un nouveau résident -->
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- ForgotPasswordActivity : réinitialisation du mot de passe -->
+        <activity
+            android:name=".ForgotPasswordActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- MainActivity : écran principal avec Navigation Drawer + fragments -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- EditProfileActivity : modification du profil utilisateur -->
+        <activity
+            android:name=".EditProfileActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!--
+            Activités conservées de l'ancienne version (rétrocompatibilité).
+            Peuvent être supprimées si non utilisées.
+        -->
+        <activity
+            android:name=".HabitatActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ToolsActivity"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

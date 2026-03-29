@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    colors.xml — Palette de couleurs de PowerHome.
+
+    Thème : vert (éco-citoyen) + accents orange et rouge pour les alertes.
+    Respecte les conventions Material Design 3.
+-->
+<resources>
+    <!-- Couleurs principales -->
+    <color name="green_dark">#1B5E20</color>    <!-- Couleur primaire (toolbar, boutons) -->
+    <color name="green_medium">#2E7D32</color>  <!-- Variante moyenne (textes) -->
+    <color name="green_light">#A5D6A7</color>   <!-- Variante claire (header Drawer) -->
+    <color name="green_bg">#E8F5E9</color>      <!-- Fond vert très léger (éco-coins) -->
+
+    <!-- Couleurs d'alerte (consommation) -->
+    <color name="wattage_low">#2E7D32</color>   <!-- Vert : consommation faible -->
+    <color name="wattage_medium">#E65100</color><!-- Orange : consommation modérée -->
+    <color name="wattage_high">#B71C1C</color>  <!-- Rouge : consommation élevée -->
+
+    <!-- Couleurs neutres -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey_text">#888888</color>
+    <color name="grey_divider">#EEEEEE</color>
+    <color name="background">#F5F7F9</color>    <!-- Fond gris très léger de l'appli -->
+
+    <!-- Rétrocompatibilité avec le code existant -->
+    <color name="blue">#68cafb</color>
+    <color name="marron">#202020</color>
+    <color name="orange">#f68c1e</color>
+    <color name="blue2">#456896</color>
+    <color name="gris">#8b8b8b</color>
+</resources>

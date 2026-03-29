@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    strings.xml — Toutes les chaînes de caractères de l'application.
+
+    Bonne pratique : centraliser ici toutes les chaînes permet de :
+    - Faciliter la traduction (internationalisation)
+    - Éviter les chaînes hardcodées dans le code Java
+    - Maintenir la cohérence de l'interface
+-->
+<resources>
+    <!-- Nom de l'application -->
+    <string name="app_name">PowerHome</string>
+
+    <!-- Titres de la navigation Drawer -->
+    <string name="nav_habitats">Liste des habitats</string>
+    <string name="nav_my_habitat">Mon habitat</string>
+    <string name="nav_notifications">Mes notifications</string>
+    <string name="nav_preferences">Mes préférences</string>
+    <string name="nav_about">À propos</string>
+    <string name="nav_logout">Déconnexion</string>
+
+    <!-- Boîte de dialogue "À propos" -->
+    <string name="about_title">À propos de PowerHome</string>
+    <string name="about_message">
+        PowerHome — v1.0\n\n
+        Application mobile de gestion d\'une résidence participative.\n\n
+        Développée dans le cadre du projet R4.real11 à l\'IUT Paris Rives de Seine.\n\n
+        Fonctionnalités :\n
+        • Authentification sécurisée\n
+        • Gestion des habitats et équipements\n
+        • Suivi de la consommation électrique\n
+        • Système de bonus éco-coins\n\n
+        © 2026 — BUT Informatique 2ème année
+    </string>
+
+    <!-- Écran Login -->
+    <string name="login_title">Connexion</string>
+    <string name="login_subtitle">Connectez-vous</string>
+    <string name="hint_email">Adresse email</string>
+    <string name="hint_password">Mot de passe</string>
+    <string name="btn_login">SE CONNECTER</string>
+    <string name="btn_forgot_password">Mot de passe oublié ?</string>
+    <string name="btn_register_prompt">Pas encore de compte ?</string>
+    <string name="btn_register">S\'INSCRIRE</string>
+
+    <!-- Écran Register -->
+    <string name="register_title">Créer un compte</string>
+    <string name="hint_firstname">Prénom</string>
+    <string name="hint_lastname">Nom de famille</string>
+    <string name="hint_phone">Numéro de téléphone</string>
+    <string name="btn_create">CRÉER MON COMPTE</string>
+
+    <!-- Écran Forgot Password -->
+    <string name="forgot_title">Mot de passe oublié</string>
+    <string name="forgot_description">Saisissez votre email. Vous recevrez un lien de réinitialisation.</string>
+    <string name="btn_send_link">ENVOYER LE LIEN</string>
+
+    <!-- Écran Edit Profile -->
+    <string name="edit_profile_title">Mon profil</string>
+    <string name="hint_current_password">Mot de passe actuel</string>
+    <string name="hint_new_password">Nouveau mot de passe</string>
+    <string name="btn_save">ENREGISTRER</string>
+    <string name="section_change_password">Changer de mot de passe (optionnel)</string>
+
+    <!-- Fragments -->
+    <string name="loading">Chargement…</string>
+    <string name="empty_list">Aucun habitat trouvé.</string>
+    <string name="no_habitat">Aucun habitat assigné à votre compte.\nContactez l\'administrateur.</string>
+    <string name="total_wattage">Consommation totale</string>
+    <string name="eco_coins_label">éco-coins 🌿</string>
+
+    <!-- Messages Toast / erreurs -->
+    <string name="error_network">Impossible de joindre le serveur. Vérifiez votre connexion.</string>
+    <string name="error_fields">Veuillez remplir tous les champs obligatoires.</string>
+    <string name="error_password_length">Le mot de passe doit contenir au moins 6 caractères.</string>
+
+    <!-- Logout -->
+    <string name="logout_confirm_title">Déconnexion</string>
+    <string name="logout_confirm_message">Voulez-vous vous déconnecter ?</string>
+    <string name="yes">Oui</string>
+    <string name="no">Non</string>
+    <string name="close">Fermer</string>
+</resources>

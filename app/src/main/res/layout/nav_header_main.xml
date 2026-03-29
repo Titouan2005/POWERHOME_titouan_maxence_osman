@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    nav_header_main.xml — En-tête du menu latéral (Drawer).
+    Affiche l'avatar, le nom complet et l'email du résident connecté.
+    Les TextViews sont remplis dynamiquement dans MainActivity.setupDrawerHeader().
+-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="#1B5E20"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <!-- Avatar circulaire (icône de l'appli) -->
+    <ImageView
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@mipmap/ic_launcher_round"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Nom complet du résident -->
+    <TextView
+        android:id="@+id/header_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Résident"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <!-- Email du résident -->
+    <TextView
+        android:id="@+id/header_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="email@powerhome.fr"
+        android:textColor="#B9F6CA"
+        android:textSize="13sp" />
+
+</LinearLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    drawer_menu.xml — Menu de navigation latérale.
+
+    Groupe 3 de l'énoncé :
+      - "Liste des habitats"  → HabitatsFragment
+      - "Mon habitat"         → MyHabitatFragment
+      - "Mes notifications"   → NotificationsFragment
+      - "Mes préférences"     → PreferencesFragment
+      - "À propos"            → AlertDialog (pas un fragment)
+      - "Déconnexion"         → logout()
+
+    Les icônes utilisent les vecteurs Android Material intégrés.
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Section principale : navigation entre fragments -->
+    <group
+        android:id="@+id/group_main"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_habitats"
+            android:icon="@android:drawable/ic_menu_sort_by_size"
+            android:title="@string/nav_habitats" />
+
+        <item
+            android:id="@+id/nav_my_habitat"
+            android:icon="@android:drawable/ic_menu_myplaces"
+            android:title="@string/nav_my_habitat" />
+
+        <item
+            android:id="@+id/nav_notifications"
+            android:icon="@android:drawable/ic_dialog_info"
+            android:title="@string/nav_notifications" />
+
+        <item
+            android:id="@+id/nav_preferences"
+            android:icon="@android:drawable/ic_menu_manage"
+            android:title="@string/nav_preferences" />
+
+    </group>
+
+    <!-- Section secondaire : actions globales -->
+    <group android:id="@+id/group_secondary">
+
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@android:drawable/ic_menu_info_details"
+            android:title="@string/nav_about" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@android:drawable/ic_lock_power_off"
+            android:title="@string/nav_logout" />
+
+    </group>
+
+</menu>

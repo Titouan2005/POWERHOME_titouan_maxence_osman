@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    fragment_habitats.xml — Fragment "Liste des habitats".
+    Contient une ListView remplie par HabitatAdapter,
+    un ProgressBar pendant le chargement réseau,
+    et un TextView affiché si la liste est vide.
+-->
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7F9">
+
+    <!-- Liste des habitats -->
+    <ListView
+        android:id="@+id/lv_habitats"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="12dp"
+        android:clipToPadding="false"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="8dp" />
+
+    <!-- Indicateur de chargement (visible pendant l'appel API) -->
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminateTint="#1B5E20"
+        android:visibility="gone" />
+
+    <!-- Message si la liste est vide -->
+    <TextView
+        android:id="@+id/tv_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Aucun habitat trouvé."
+        android:textColor="#8b8b8b"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+</FrameLayout>
